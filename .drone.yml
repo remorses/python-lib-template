@@ -7,3 +7,11 @@ steps:
   - pip install .
   - pip install pytest
   - pytest
+# - name: pypi_publish
+#   image: plugins/pypi
+#   settings:
+#     username: xmorse
+#     username:
+#       from_secret: pypi_username
+#     password:
+#       from_password: pypi_password
