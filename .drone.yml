@@ -13,17 +13,20 @@ steps:
   commands:
   - pip install . > /dev/null
   - pip install pytest > /dev/null
-  - pytest  --disable-warnings
-# - name: bump
-#   image: xplugins/bump
-#   settings:
-#     github_token: 
-#       from_secret: github_token
-#     versionfile: VERSION
-# - name: pypi_publish
-#   image: plugins/pypi
-#   settings:
-#     username: xmorse
-#     setupfile: setup.py
-#     password:
-#       from_secret: pypi_password
+  - pytest  --disable-warnings -sv
+- name: bump
+  image: xplugins/bump
+  settings:
+    github_token: 
+      from_secret: github_token
+    versionfile: VERSION
+- name: pypi_publish
+  image: plugins/pypi
+  settings:
+    username: xmorse
+    setupfile: setup.py
+    password:
+      from_secret: pypi_password
+    distributions:
+      - sdist
+      - bdist_wheel
