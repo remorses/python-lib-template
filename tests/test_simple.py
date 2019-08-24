@@ -1,5 +1,5 @@
 
 
 
-def test_simple():
-    assert True
+def test_ready():
+    assert False
