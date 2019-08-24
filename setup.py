@@ -3,8 +3,8 @@ from setuptools import setup
 NAME = 'module'
 setup(
     name=NAME,
-    version=open('VERSION').read().strip(),
-
+    # [bump]
+    version='0.0.0',
     description=NAME,
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
