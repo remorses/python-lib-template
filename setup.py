@@ -16,8 +16,7 @@ setup(
     url=f'https://github.com/remorses/{NAME}',
     keywords=['TODO'],
     install_requires=[x for x in open('./requirements.txt').read().strip().split('\n') if x.strip()],
-    package_data={'': ['*.yaml', '*.json', '*.yml']},
-    include_package_data=True,
+    package_data={'': ['*.yaml', '*.json', '*.yml', 'VERSION', 'README.md', 'requirements.txt']},
     classifiers=[
         'Intended Audience :: Information Technology',
         'Programming Language :: Python :: 3',
